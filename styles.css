@@ -1,0 +1,69 @@
+body {
+    font-family: Arial, sans-serif;
+    width: 220px;
+    padding: 15px;
+    background-color: #f5eded;
+    color: #3e3636;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: #f5eded;
+}
+
+button:hover {
+    background-color: #3e3636;
+}
+
+#redirect {
+    background-color: #d72323;
+}
+
+#openInTab {
+    background-color: #3e3636;
+}
+
+label {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+/* Optional: Adding some transition effects for smoothness */
+button,
+input[type="checkbox"] {
+    transition: all 0.3s ease;
+}
+
+label {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    /* Adding space below the label */
+    padding: 10px 0;
+    border-bottom: 2px solid #3e3636;
+    /* A subtle border for visual separation */
+}
+
+/* Adjusting space between the label text and the checkbox */
+label span {
+    margin-right: 10px;
+    font-weight: bold;
+}
