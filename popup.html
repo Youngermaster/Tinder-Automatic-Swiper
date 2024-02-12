@@ -10,8 +10,14 @@
 
 <body>
     <h1>Tinder Automation</h1>
-    <input type="checkbox" id="autoSwipe"> Activate Auto Swipe<br>
-    <input type="number" id="delayTime" placeholder="Delay time in seconds"><br>
+    <label>
+        <span>Activate Auto Swipe:</span>
+        <input type="checkbox" id="autoSwipe"> <br>
+    </label>
+    <label>
+        <span>Delay Time (seconds):</span>
+        <input type="number" id="delayTime" placeholder="1" value="1">
+    </label>
     <button id="saveSettings">Save Settings</button>
     <script src="popup.js"></script>
 </body>

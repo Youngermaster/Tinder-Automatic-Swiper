@@ -2,8 +2,8 @@ body {
     font-family: Arial, sans-serif;
     width: 220px;
     padding: 15px;
-    background-color: #f5eded;
-    color: #3e3636;
+    background-color: #63CAF2;
+    color: #344348;
 }
 
 button {
@@ -17,18 +17,11 @@ button {
     cursor: pointer;
     transition: background-color 0.3s ease;
     color: #f5eded;
+    background-color: #F20544;
 }
 
 button:hover {
-    background-color: #3e3636;
-}
-
-#redirect {
-    background-color: #d72323;
-}
-
-#openInTab {
-    background-color: #3e3636;
+    background-color: #D90452;
 }
 
 label {
@@ -39,9 +32,14 @@ label {
 }
 
 input[type="checkbox"] {
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     cursor: pointer;
+}
+
+input[type="number"] {
+    width: 30px;
+    height: 30px;
 }
 
 /* Optional: Adding some transition effects for smoothness */
