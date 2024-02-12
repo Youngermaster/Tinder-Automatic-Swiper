@@ -4,7 +4,6 @@
     "description": "A simple Chrome extension to automate the process of sending ice breakers on Tinder and also giving likes.",
     "manifest_version": 3,
     "permissions": [
-        "tabs",
         "activeTab",
         "storage"
     ],
@@ -26,6 +25,7 @@
         {
             "matches": [
                 "https://www.tinder.com/*",
+                "*://*.tinder.com/*",
                 "https://google.com/*"
             ],
             "js": [
@@ -34,7 +34,6 @@
         }
     ],
     "host_permissions": [
-        "https://www.tinder.com/*",
         "https://google.com/*"
     ]
 }
