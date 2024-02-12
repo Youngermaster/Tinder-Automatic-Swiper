@@ -1,5 +1,3 @@
-console.log("Content script loaded");
-
 // Helper function to delay execution
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));

@@ -1,5 +1,3 @@
-console.log("Popup script loaded");
-
 document.getElementById("saveSettings").addEventListener("click", () => {
   const autoSwipe = document.getElementById("autoSwipe").checked;
   const delayTime = document.getElementById("delayTime").value;
