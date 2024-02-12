@@ -1,63 +1,49 @@
-# Tinder Ice Breaker Automation
+# Tinder Automatic Swiper
 
-[![Icon128.png](images/icon128.png)](https://chrome.google.com/webstore/detail/youtube-short-redirector/mnijpcchboaebolejillacjcmngnhppg/)
+![Icon128.png](images/icon128.png)
 
-A simple Chrome extension to convert YouTube short URLs to the full video URLs and optionally auto-redirect. The extensions is deployed [here](https://chrome.google.com/webstore/detail/youtube-short-redirector/mnijpcchboaebolejillacjcmngnhppg/).
+A simple Chrome extension to automate the process of swiping right on Tinder, designed to enhance your Tinder experience by automating likes.
 
 ## Features
 
-- **Instant Redirect**: With just a click, convert the YouTube short URL to its full video URL and stay on the same tab.
-- **Open in New Tab**: Want to keep the short URL page and also view the full video? Just use this feature to open the full video URL in a new tab.
-- **Auto-Redirect**: Don't want to click every time? Just toggle on the Auto-Redirect feature, and every time you visit a YouTube short URL, the extension will automatically redirect you to the full video URL.
+- **Auto Swipe**: Automatically swipe right on profiles, saving you time and effort.
+- **Customizable Delay**: Set a delay time in seconds between swipes to mimic human behavior and avoid detection.
+- **Easy Toggle**: Activate or deactivate auto swiping with just a checkbox.
 
 ## Installation
 
 1. Clone or download this repository.
-2. Open Google Chrome and go to `chrome://extensions/`.
-3. Enable "Developer mode" (usually a toggle switch in the top right corner).
+2. Open Google Chrome and navigate to `chrome://extensions/`.
+3. Enable "Developer mode" at the top right corner.
 4. Click "Load unpacked" and select the directory where you cloned or extracted the extension.
-5. The extension icon should now appear in your Chrome toolbar.
+5. The extension icon should now appear in your Chrome toolbar, ready for use.
 
 ## Usage
 
-1. Click on the extension icon in the Chrome toolbar.
-2. For a one-time redirect, use the "Redirect Now" button.
-3. To open the full video URL in a new tab, use the "Open in New Tab" button.
-4. To enable or disable auto-redirect, use the "Auto redirect" toggle.
-
-## Colors
-
-- Red: `#d72323`
-- Off-white: `#f5eded`
-- Gray: `#3e3636`
-- Black: `#000000`
-
-## License
-
-Apache License. See `LICENSE` for more information.
+1. Click on the extension icon in the Chrome toolbar to open the popup.
+2. To activate auto swiping, check the "Activate Auto Swipe" checkbox.
+3. Set your desired delay time in seconds in the "Delay Time" input field.
+4. Click "Save Settings" to apply your changes.
+5. Navigate to Tinder in your browser, and the extension will start to automatically swipe right based on your settings.
 
 ## Permissions Explained
 
-For clarity and transparency, here's a brief justification for each of the permissions and host permissions required by this extension:
+For clarity and transparency, here's a brief justification for each of the permissions required by this extension:
 
-### Permissions:
+### Permissions
 
-1. **tabs**:
+- **tabs**: Needed to perform operations with browser tabs, such as detecting the Tinder tab to start auto swiping.
+- **activeTab**: Allows the extension to access and interact with the content of the current active tab, crucial for identifying and clicking the "Like" button on Tinder.
+- **storage**: Utilized to save and retrieve the user's settings (auto swipe activation and delay time) locally in the browser.
 
-   - **Purpose**: To interact with browser tabs. This enables operations like querying for currently open tabs, opening new ones, or updating existing tabs.
-   - **Usage in Extension**: Enables the functionality to redirect from a YouTube short video URL to its standard format and to open the transformed URL in a new tab.
+### Host Permissions
 
-2. **activeTab**:
+- **https://www.tinder.com/***: This permission allows the extension to interact with Tinder's website, enabling it to automate swipes.
 
-   - **Purpose**: Provides temporary access to the current active tab when the user invokes the extension.
-   - **Usage in Extension**: Determines if the current URL is a YouTube short URL and performs the redirection operation.
+## Disclaimer
 
-3. **storage**:
-   - **Purpose**: Allows the extension to use the Chrome `storage` API to save and retrieve data.
-   - **Usage in Extension**: Saves and retrieves the user's "Auto redirect" choice, ensuring the extension remembers user preferences.
+This extension is intended for personal use and as a demonstration of Chrome extension capabilities. Please be mindful of Tinder's terms of service regarding automation and use this extension responsibly.
 
-### Host Permissions:
+## License
 
-1. **https://www.youtube.com/***:
-   - **Purpose**: Grants the extension access to pages under the `youtube.com` domain.
-   - **Usage in Extension**: Ensures the extension can detect and act on YouTube short URLs, transforming them to their corresponding standard format.
+Distributed under the MIT License. See `LICENSE` for more information.
