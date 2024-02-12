@@ -2,8 +2,8 @@ body {
     font-family: Arial, sans-serif;
     width: 220px;
     padding: 15px;
-    background-color: #63CAF2;
-    color: #344348;
+    background-color: #73022C;
+    color: #F0F5FD;
 }
 
 button {
@@ -16,12 +16,12 @@ button {
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    color: #f5eded;
-    background-color: #F20544;
+    color: #F0F5FD;
+    background-color: #FF3E50;
 }
 
 button:hover {
-    background-color: #D90452;
+    background-color: #F31F3B;
 }
 
 label {
@@ -56,7 +56,7 @@ label {
     margin-bottom: 20px;
     /* Adding space below the label */
     padding: 10px 0;
-    border-bottom: 2px solid #3e3636;
+    border-bottom: 2px solid #FF3E50;
     /* A subtle border for visual separation */
 }
 
