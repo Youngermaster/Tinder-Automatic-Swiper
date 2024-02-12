@@ -18,10 +18,23 @@
             "32": "images/icon32.png",
             "48": "images/icon48.png",
             "128": "images/icon128.png",
-            "256": "images/icon.png"
+            "256": "images/icon256.png",
+            "512": "images/icon.png"
         }
     },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.tinder.com/*",
+                "https://google.com/*"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ],
     "host_permissions": [
-        "https://www.youtube.com/*"
+        "https://www.tinder.com/*",
+        "https://google.com/*"
     ]
 }
