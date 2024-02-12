@@ -17,17 +17,14 @@
             "16": "images/icon16.png",
             "32": "images/icon32.png",
             "48": "images/icon48.png",
-            "128": "images/icon128.png",
-            "256": "images/icon256.png",
-            "512": "images/icon.png"
+            "128": "images/icon128.png"
         }
     },
     "content_scripts": [
         {
             "matches": [
                 "https://www.tinder.com/*",
-                "*://*.tinder.com/*",
-                "https://google.com/*"
+                "*://*.tinder.com/*"
             ],
             "js": [
                 "content.js"
@@ -35,6 +32,7 @@
         }
     ],
     "host_permissions": [
-        "https://google.com/*"
+        "https://www.tinder.com/*",
+        "*://*.tinder.com/*"
     ]
 }
