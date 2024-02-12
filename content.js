@@ -1,18 +1,5 @@
 console.log("Content script loaded");
 
-function simulateKeyPress(selector, keyCode) {
-  let event = new KeyboardEvent("keydown", {
-    key: "RightArrow",
-    keyCode: keyCode,
-    code: "ArrowRight",
-    which: keyCode,
-    shiftKey: false,
-    ctrlKey: false,
-    metaKey: false,
-  });
-  document.querySelector(selector).dispatchEvent(event);
-}
-
 // Helper function to delay execution
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
@@ -34,9 +21,6 @@ async function autoSwipeRight() {
     );
 
     // if (!autoSwipe) break; // Exit loop if autoSwipe is disabled
-
-    // Simulate the key press or click action here
-    simulateKeyPress("body", 39); // keyCode for right arrow is 39
 
     // Wait for the specified delay time before the next action
     await sleep(delayTime * 1000);
