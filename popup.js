@@ -1,11 +1,16 @@
 // This function updates the UI with stored values
 function updateUIWithStoredValues() {
-  chrome.storage.local.get(["autoSwipe", "delayTime"], function (result) {
+  chrome.storage.local.get(["autoLike", "autoDislike", "delayTime"], function (result) {
     console.log(result); // Log the result to see what's fetched
 
-    if (result.autoSwipe !== undefined) {
-      // Check if autoSwipe has a stored value
-      document.getElementById("autoSwipe").checked = result.autoSwipe;
+    if (result.autoLike !== undefined) {
+      // Check if autoLike has a stored value
+      document.getElementById("autoLike").checked = result.autoLike;
+    }
+
+    if (result.autoDislike !== undefined) {
+      // Check if delayTime has a stored value
+      document.getElementById("autoDislike").value = result.autoDislike;
     }
 
     if (result.delayTime !== undefined) {
@@ -17,9 +22,9 @@ function updateUIWithStoredValues() {
 
 // Save settings when the "Save Settings" button is clicked
 document.getElementById("saveSettings").addEventListener("click", () => {
-  const autoSwipe = document.getElementById("autoSwipe").checked;
+  const autoLike = document.getElementById("autoLike").checked;
   const delayTime = document.getElementById("delayTime").value;
-  chrome.storage.local.set({ autoSwipe, delayTime }, () => {
+  chrome.storage.local.set({ autoLike, delayTime }, () => {
     console.log("Settings saved");
   });
 });
