@@ -10,7 +10,7 @@ function updateUIWithStoredValues() {
 
     if (result.autoDislike !== undefined) {
       // Check if delayTime has a stored value
-      document.getElementById("autoDislike").value = result.autoDislike;
+      document.getElementById("autoDislike").checked = result.autoDislike;
     }
 
     if (result.delayTime !== undefined) {
@@ -23,8 +23,9 @@ function updateUIWithStoredValues() {
 // Save settings when the "Save Settings" button is clicked
 document.getElementById("saveSettings").addEventListener("click", () => {
   const autoLike = document.getElementById("autoLike").checked;
+  const autoDislike = document.getElementById("autoDislike").checked;
   const delayTime = document.getElementById("delayTime").value;
-  chrome.storage.local.set({ autoLike, delayTime }, () => {
+  chrome.storage.local.set({ autoLike, autoDislike, delayTime }, () => {
     console.log("Settings saved");
   });
 });
