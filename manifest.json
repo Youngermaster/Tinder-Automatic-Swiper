@@ -4,8 +4,6 @@
     "description": "A simple Chrome extension to automate the process of swiping right on Tinder.",
     "manifest_version": 3,
     "permissions": [
-        "tabs",
-        "activeTab",
         "storage"
     ],
     "background": {
