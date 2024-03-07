@@ -40,3 +40,4 @@ async function autoLikeRight() {
 }
 
 autoLikeRight();
+//
